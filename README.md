@@ -3,5 +3,5 @@ This is my personal collection of dotfiles I use for various configurations on L
 
 # Configurations
 - i3-gaps
-- Xresources with uxrvt
+- Xresources with URxvt
 - Vim
