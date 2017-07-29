@@ -1,4 +1,4 @@
-"".vimrc
+" .vimrc
 
 " Set line numbers
 set number
@@ -8,4 +8,4 @@ set expandtab
 set shiftwidth=4 
 set smarttab
 set softtabstop=0 
-set tabstop=8.vimrc
+set tabstop=8
