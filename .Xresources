@@ -53,3 +53,6 @@ URxvt*scrollBar: false
 ! Xft.hintstyle: hintfull
 ! Xft.rgba: rgb
 
+! for use with PC
+! URxvt.font: 6x13
+! URxvt.boldFont: 6x13b
