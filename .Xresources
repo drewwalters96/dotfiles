@@ -35,18 +35,21 @@
 *.color7:       #707880
 *.color15:      #c5c8c6
 
-URxvt*transparent: true
-URxvt*shading: 50
-URxvt*scrollBar: false
-URxvt.font: 10x20 
-URxvt.boldFont: 10x20b
-
+! ctl moves to next word (bash)
 URxvt.keysym.Control-Left:   \033[1;5D
 URxvt.keysym.Control-Right:  \033[1;5C
 
-Xft.dpi: 192
-Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.hintstyle: hintfull
+! for use with i3
+URxvt*transparent: true
+URxvt*shading: 50
+URxvt*scrollBar: false
+
+! for use with Mac
+! URxvt.font: 10x20 
+! URxvt.boldFont: 10x20b
+! Xft.antialias: true
+! Xft.dpi: 192
+! Xft.hinting: true
+! Xft.hintstyle: hintfull
+! Xft.rgba: rgb
 
