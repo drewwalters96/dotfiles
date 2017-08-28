@@ -1,9 +1,13 @@
 " .vimrc
 
-" Set line numbers
+" Line numbers
 set number
 
-" set syntax highlighting 
+" For tmux
+set background=dark
+set t_Co=256
+
+" Syntax highlighting 
 syntax on
 
 " Tab key == 4 spaces
