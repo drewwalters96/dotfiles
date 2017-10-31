@@ -7,12 +7,28 @@ set number
 set background=dark
 set t_Co=256
 
-" Syntax highlighting 
-syntax on
+" Bell
+set vb
 
-" Tab key == 4 spaces
-set expandtab 
-set shiftwidth=4 
-set smarttab
-set softtabstop=0 
-set tabstop=8
+" Show trailing whitespace
+" From http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" Syntax highlighting
+syntax 	  on
+
+highlight Comment   ctermfg=green
+highlight Constant  ctermfg=magenta
+highlight LineNr    ctermfg=grey
+highlight PreProc   ctermfg=darkblue
+highlight Statement ctermfg=darkblue
+highlight Type      ctermfg=lightgreen
+
+" Spacing
+au Filetype go setl ts=8
+au Filetype python setl et sw=4 ts=4
