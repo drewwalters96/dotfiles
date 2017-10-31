@@ -1,58 +1,45 @@
 ! special
-*.foreground:   #c5c8c6
-*.background:   #1d1f21
-*.cursorColor:  #c5c8c6
+*.background:   		#1d1f21
+*.cursorColor:  		#c5c8c6
+*.foreground:			#c5c8c6
 
 ! black
-*.color0:       #282a2e
-*.color8:       #373b41
+*.color0:       		#212121
+*.color8:       		#212121
 
 ! red
-*.color1:       #a54242
-*.color9:       #cc6666
+*.color1:       		#a54242
+*.color9:       		#cc5353
 
 ! green
-*.color2:       #8c9440
-*.color10:      #b5bd68
+*.color2:       		#2a8c2a
+*.color10:      		#47b347
 
 ! yellow
-*.color3:       #de935f
-*.color11:      #f0c674
+*.color3:       		#bfc127
+*.color11:      		#c0bb43
 
 ! blue
-*.color4:       #5f819d
-*.color12:      #81a2be
+*.color4:       		#0067be
+*.color12:      		#81a2be
 
 ! magenta
-*.color5:       #85678f
-*.color13:      #b294bb
+*.color5:       		#8f288e
+*.color13:      		#ae47ab
 
 ! cyan
-*.color6:       #5e8d87
-*.color14:      #8abeb7
+*.color6:       		#39a091
+*.color14:      		#59beb2
 
 ! white
-*.color7:       #707880
-*.color15:      #c5c8c6
+*.color7:       		#d4d1c1
+*.color15:      		#d4d1c1
 
-! ctl moves to next word (bash)
-URxvt.keysym.Control-Left:   \033[1;5D
-URxvt.keysym.Control-Right:  \033[1;5C
-
-! for use with i3
-URxvt*transparent: true
-URxvt*shading: 50
-URxvt*scrollBar: false
-
-! for use with Mac
-! URxvt.font: 10x20 
-! URxvt.boldFont: 10x20b
-! Xft.antialias: true
-! Xft.dpi: 192
-! Xft.hinting: true
-! Xft.hintstyle: hintfull
-! Xft.rgba: rgb
-
-! for use with PC
-! URxvt.font: 6x13
-! URxvt.boldFont: 6x13b
+! URxvt Config
+URxvt.boldFont:
+URxvt.keysym.Control-Left:   	\033[1;5D
+URxvt.keysym.Control-Right:  	\033[1;5C
+URxvt.scrollBar: 		false
+URxvt.title:			Terminal
+URxvt.urgentOnBell: 		false
+URxvt.visualBell:		false
