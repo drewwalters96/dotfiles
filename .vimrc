@@ -36,3 +36,4 @@ au Filetype haskell  setl et sw=2 ts=2
 au Filetype python   setl et sw=4 ts=4
 au Filetype markdown setl et sw=4 ts=4 tw=79
 au Filetype rst      setl et sw=4 ts=4 tw=79
+au Filetype shell    setl et sw=2 ts=2
