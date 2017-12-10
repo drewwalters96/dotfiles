@@ -133,10 +133,9 @@ bindsym $mod+r mode "resize"
 # From Arch Linux Wiki: https://wiki.archlinux.org/index.php/i3#Shutdown.2C_reboot.2C_lock_screen
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id lock.sh --lock dim, mode "default"
+    bindsym l exec --no-startup-id lock.sh --lock, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id lock.sh --lock && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id lock.sh --lock && systemctl hibernate, mode "default"
+    bindsym s exec --no-startup-id lock.sh --sleep, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
