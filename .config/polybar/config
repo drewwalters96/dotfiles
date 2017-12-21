@@ -8,7 +8,7 @@
 ;=====================================================
 
 [colors]
-background = #212121
+background = #1d1f21
 background-alt = #444
 foreground = #dfdfdf
 foreground-alt = #555
@@ -18,28 +18,30 @@ alert = #bd2c40
 
 ; Status bar for left monitor
 [bar/left]
-monitor = ${env:MONITOR:DVI-I-2}
+monitor = ${env:MONITOR:DVI-I-0}
 
 width = 100%
-height = 27
+height = 20
 radius = 0.0
 fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = fixed:pixelsize=10.5;3
-font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
-font-2 = FontAwesome:pixelsize=12;3
+font-0 = lucy tewi:pixelsize=15;1
+font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
+font-2 = FontAwesome:pixelsize=9;2
+font-3 = Material Icons:size=8;2.5
+font-4 = OpenLogos:size=8;2.5
 
-border-size = 1
-border-color = #00000000
+border-bottom-size = 1
+border-color = #000
 
 padding-left = 3
-padding-right = 1
+padding-right = 3
 
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 1.5
+module-margin-right = 1.5
 
 modules-left = logo i3
 modules-center = time
@@ -56,25 +58,27 @@ cursor-scroll = ns-resize
 monitor = ${env:MONITOR:DVI-I-3}
 
 width = 100%
-height = 27
+height = 20
 radius = 0.0
 fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-size = 1
-border-color = #00000000
+border-bottom-size = 1
+border-color = #000
 
 padding-left = 3
 padding-right = 3
 
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 1.5
+module-margin-right = 1.5
 
-font-0 = fixed:pixelsize=10.5;3
-font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
-font-2 = FontAwesome:pixelsize=12;3
+font-0 = lucy tewi:pixelsize=15;1
+font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
+font-2 = FontAwesome:pixelsize=9;2
+font-3 = Material Icons:size=8;2.5
+font-4 = OpenLogos:size=8;2.5
 
 modules-left = logo i3
 modules-center = time
@@ -94,18 +98,18 @@ type = internal/bspwm
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-occupied = %index%
-label-occupied-padding = 2
+label-occupied-padding = 1
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 
 ; i3 workspaces
 [module/i3]
@@ -114,31 +118,38 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-default = 
+
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 0
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %icon%
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %icon%
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %icon%
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
@@ -148,7 +159,7 @@ interface = wlp4s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-prefix = " "
+format-connected-prefix = ""
 label-connected = %essid%
 
 format-disconnected =
@@ -172,7 +183,7 @@ interface = enp0s25
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = "  "
+format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground}
 label-connected = %local_ip%
 
@@ -182,7 +193,7 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = "  %a %h %d"
+date = " %a %h %d"
 
 format-prefix =
 format-prefix-foreground = ${colors.foreground}
@@ -193,7 +204,7 @@ label = %date%
 type = internal/date
 interval = 5
 
-time = "%l:%M %p"
+time = " %l:%M %p"
 
 label = %time%
 
@@ -204,7 +215,8 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+;label-open =
+label-open =
 label-open-foreground = ${colors.foreground}
 label-close = cancel
 label-close-foreground = ${colors.foreground}
