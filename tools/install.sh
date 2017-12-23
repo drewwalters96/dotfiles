@@ -11,4 +11,7 @@ for f in $(ls -A); do
   fi
 done
 
+echo 'Installing lockscreen (needs sudo access)'
+sudo cp usr/local/bin/betterlockscreen /usr/local/bin/betterlockscreen
+
 echo "Done."
