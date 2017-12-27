@@ -24,10 +24,10 @@ exec_always                  --no-startup-id $HOME/.config/polybar/launch.sh
 # Start Dunst
 exec_always                  dunst -c ~/.config/dunst/dunstrc
 
-# Set i3lock
-set $Locker                  i3lock && sleep 1
+# Start Compton
+exec_always                  compton --config ~/.config/compton.conf -b
 
-# Screen rightness
+# Screen brightness
 bindsym $mod+F1              exec xbacklight -10
 bindsym $mod+F2              exec xbacklight +10
 
@@ -137,7 +137,7 @@ set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) re
 mode "$mode_system" {
     bindsym l exec --no-startup-id betterlockscreen -l dimblur, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id betterlockscreen -s dumblur, mode "default"
+    bindsym s exec --no-startup-id betterlockscreen --s dimblur, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
