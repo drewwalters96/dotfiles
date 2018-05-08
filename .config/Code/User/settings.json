@@ -1,0 +1,12 @@
+{
+    "editor.fontFamily": "'Deja Vu Sans Mono', 'monospace', 'Droid Sans Fallback'",
+    "editor.fontSize": 13,
+    "editor.tabSize": 8,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderWhitespace": "boundary",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": -1,
+}
