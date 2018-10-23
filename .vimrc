@@ -1,7 +1,8 @@
 " .vimrc
 
-" Line numbers
+" General
 set number
+set ruler
 
 " For tmux
 set background=dark
@@ -30,10 +31,10 @@ highlight Statement ctermfg=darkblue
 highlight Type      ctermfg=lightgreen
 
 " Spacing
-au Filetype asm      setl ts=8
-au Filetype go       setl ts=8
-au Filetype haskell  setl et sw=2 ts=2
-au Filetype python   setl et sw=4 ts=4
-au Filetype markdown setl et sw=4 ts=4 tw=79
-au Filetype rst      setl et sw=4 ts=4 tw=79
-au Filetype shell    setl et sw=2 ts=2
+au FileType gitcommit  set tw=72 spell
+au Filetype haskell    setl et sw=2 ts=2
+au Filetype python     setl et sw=4 ts=4 tw=79
+au Filetype markdown   setl et sw=4 ts=4 tw=80 spell
+au Filetype rst        setl et sw=4 ts=4 tw=79 spell
+au Filetype sh         setl et sw=2 ts=2 tw=80
+au Filetype yaml       setl et sw=2 ts=2 tw=80
