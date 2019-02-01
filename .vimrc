@@ -33,8 +33,8 @@ highlight Type      ctermfg=lightgreen
 " Spacing
 au FileType gitcommit  set tw=72 spell
 au Filetype haskell    setl et sw=2 ts=2
-au Filetype python     setl et sw=4 ts=4 tw=79
+au Filetype python     setl et sw=4 ts=4
 au Filetype markdown   setl et sw=4 ts=4 tw=80 spell
 au Filetype rst        setl et sw=4 ts=4 tw=79 spell
-au Filetype sh         setl et sw=2 ts=2 tw=80
-au Filetype yaml       setl et sw=2 ts=2 tw=80
+au Filetype sh         setl et sw=2 ts=2
+au Filetype yaml       setl et sw=2 ts=2
