@@ -1,0 +1,6 @@
+- name: Configure C Compiler
+  block:
+    - apt:
+        name: gcc
+        state: present
+  become: true
