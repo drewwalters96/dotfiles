@@ -1,11 +1,11 @@
 git:
+  editor: "vim"
   name: "Drew Walters"
   email: "drewwalters96@gmail.com"
 go:
   version: "1.14.2"
 proxy:
-  http: ""
-  https: ""
+  address: ""
   no_proxy: "localhost,127.0.0.1"
 ssh_keypair:
   directory: "~/.ssh"

@@ -1,5 +1,6 @@
 git:
+  editor: "vim"
   name: "Drew Walters"
   email: "drewwalters96@gmail.com"
 proxy:
-  http: ""
+  address: ""

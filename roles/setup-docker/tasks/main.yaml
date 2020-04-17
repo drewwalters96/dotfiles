@@ -6,20 +6,20 @@
         state: present
 
     - name: Create systemd drop-in unit directory
-      when: proxy.http
+      when: proxy.address
       file:
         path: /etc/systemd/system/docker.service.d
         state: directory
 
     - name: Configure proxy
-      when: proxy.http
+      when: proxy.address
       template:
         src: proxy.conf.j2
         dest: /etc/systemd/system/docker.service.d/proxy.conf
       become: yes
 
     - name: Restart Docker daemon
-      when: proxy.http
+      when: proxy.address
       systemd:
         state: restarted
         daemon_reload: yes

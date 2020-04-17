@@ -3,8 +3,12 @@
     git config --global user.name "{{ git.name }}"
     git config --global user.email "{{ git.email }}"
 
+- name: Configure git editor
+  shell: |
+    git config --global core.editor "{{ git.editor }}"
+
 - name: Add proxy config
-  when: proxy.http
+  when: proxy.address
   template:
-    src: git-proxy.conf.j2
-    dest: ~/.ssh/git-proxy.conf
+    src: ssh-config.j2
+    dest: ~/.ssh/config

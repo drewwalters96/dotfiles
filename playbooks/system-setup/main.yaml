@@ -1,7 +1,7 @@
 - hosts: localhost
   environment:
-    http_proxy: "{{ proxy.http }}"
-    https_proxy: "{{ proxy.https }}"
+    http_proxy: "http://{{ proxy.address }}"
+    https_proxy: "https://{{ proxy.address }}"
     no_proxy: "{{ proxy.no_proxy }}"
   roles:
     - generate-ssh-keys
