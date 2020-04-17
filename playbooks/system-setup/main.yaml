@@ -6,6 +6,8 @@
   roles:
     - generate-ssh-keys
     - setup-docker
+    - setup-gcc
     - setup-git
     - setup-go
+    - setup-make
     - setup-vim
