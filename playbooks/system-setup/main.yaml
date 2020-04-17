@@ -1,0 +1,11 @@
+- hosts: localhost
+  environment:
+    http_proxy: "{{ proxy.http }}"
+    https_proxy: "{{ proxy.https }}"
+    no_proxy: "{{ proxy.no_proxy }}"
+  roles:
+    - generate-ssh-keys
+    - setup-docker
+    - setup-git
+    - setup-go
+    - setup-vim
