@@ -1,0 +1,4 @@
+- name: Move .vimrc into place
+  copy:
+    src: "{{ role_path }}/files/.vimrc"
+    dest: "~/.vimrc"
