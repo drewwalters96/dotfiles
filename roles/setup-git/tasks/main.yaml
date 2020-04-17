@@ -1,4 +1,10 @@
-- name: Install git
+- name: Configure git user
   shell: |
     git config --global user.name "{{ git.name }}"
     git config --global user.email "{{ git.email }}"
+
+- name: Add proxy config
+  when: proxy.http
+  template:
+    src: git-proxy.conf.j2
+    dest: ~/.ssh/git-proxy.conf
