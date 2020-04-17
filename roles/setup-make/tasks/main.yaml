@@ -1,0 +1,6 @@
+- name: Configure GNU Make
+  block:
+    - apt:
+        name: make
+        state: present
+  become: true
