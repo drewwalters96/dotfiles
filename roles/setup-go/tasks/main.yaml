@@ -1,0 +1,14 @@
+- name: Install Go
+  block:
+    - name: Extract binary
+      unarchive:
+        src: "https://dl.google.com/go/go{{ go.version }}.linux-amd64.tar.gz"
+        dest: "/usr/local"
+        remote_src: yes
+
+    # From https://www.jeffgeerling.com/blog/2017/add-path-global-path-ansible
+    - name: Add Go binaries to PATH
+      copy:
+        dest: /etc/profile.d/golang.sh
+        content: "PATH=$PATH:/usr/local/go/bin"
+  become: yes
