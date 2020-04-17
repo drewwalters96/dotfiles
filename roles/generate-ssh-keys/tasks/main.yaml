@@ -1,0 +1,9 @@
+- name: Create .ssh directory
+  file:
+    path: "{{ ssh_keypair.directory }}"
+    state: directory
+
+- name: Generate keypair
+  openssh_keypair:
+    path: "{{ ssh_keypair.directory }}/{{ ssh_keypair.name }}"
+    comment: "{{ ssh_keypair.comment }}"
