@@ -2,6 +2,10 @@
 #
 # Install dotfiles on Ubuntu
 
+set -x
+
+CFG_DIR="$(mktemp -d)"
+
 # Install ansible
 if [[ ! "$(which ansible)" ]]; then
   sudo -H apt update
@@ -10,6 +14,11 @@ if [[ ! "$(which ansible)" ]]; then
   sudo -H apt install -y --no-install-recommends ansible
 fi
 
+tee "${CFG_DIR}/ansible.cfg" << EOF
+[defaults]
+roles_path = $(pwd)/roles
+EOF
+
 # Run system setup playbook
-ANSIBLE_CFG="$(pwd)/ansible.cfg" ansible-playbook -c local \
+env ANSIBLE_CFG="${CFG_DIR}/ansible.cfg" ansible-playbook -c local \
   -e @playbooks/vars/default.yaml playbooks/system-setup/main.yaml
