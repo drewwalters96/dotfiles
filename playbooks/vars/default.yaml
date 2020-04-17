@@ -1,0 +1,13 @@
+git:
+  name: "Drew Walters"
+  email: "drewwalters96@gmail.com"
+go:
+  version: "1.14.2"
+proxy:
+  http: ""
+  https: ""
+  no_proxy: "localhost,127.0.0.1"
+ssh_keypair:
+  directory: "~/.ssh"
+  name: "id_rsa"
+  comment: "drewwalters96@gmail.com"
