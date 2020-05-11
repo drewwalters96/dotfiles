@@ -20,5 +20,5 @@ roles_path = $(pwd)/roles
 EOF
 
 # Run system setup playbook
-env ANSIBLE_CFG="${CFG_DIR}/ansible.cfg" ansible-playbook -c local \
+env ANSIBLE_CONFIG="${CFG_DIR}/ansible.cfg" ansible-playbook -c local \
   -e @playbooks/vars/default.yaml playbooks/system-setup/main.yaml
