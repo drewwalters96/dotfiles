@@ -8,10 +8,10 @@ CFG_DIR="$(mktemp -d)"
 
 # Install ansible
 if [[ ! "$(which ansible)" ]]; then
-  sudo -H apt update
-  sudo -H apt install software-properties-common
+  sudo -H apt-get update
+  sudo -H apt-get -y --no-install-recommends install software-properties-common
   sudo -H apt-add-repository --yes --update ppa:ansible/ansible
-  sudo -H apt install -y --no-install-recommends ansible
+  sudo -H apt-get install -y --no-install-recommends ansible
 fi
 
 tee "${CFG_DIR}/ansible.cfg" << EOF
