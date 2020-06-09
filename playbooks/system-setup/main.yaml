@@ -9,5 +9,6 @@
     - setup-gcc
     - setup-git
     - setup-go
+    - setup-kubernetes
     - setup-make
     - setup-vim

@@ -4,6 +4,12 @@ git:
   email: "drewwalters96@gmail.com"
 go:
   version: "1.14.2"
+helm:
+  version: "3.2.3"
+kubectl:
+  version: "1.18.3"
+minikube:
+  version: "1.11.0"
 proxy:
   address: ""
   no_proxy: "localhost,127.0.0.1"

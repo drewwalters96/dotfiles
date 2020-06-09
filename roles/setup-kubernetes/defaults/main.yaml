@@ -1,0 +1,6 @@
+helm:
+  version: "3.2.3"
+kubectl:
+  version: "1.18.3"
+minikube:
+  version: "1.11.0"
